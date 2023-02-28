@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaS1Calculadora.MainPage">
+
+    <StackLayout>
+        <Entry x:Name="num1Entry"
+       Keyboard="Numeric"
+       Text="{Binding Expression.Num1, Mode=TwoWay}" />
+
+        <Entry x:Name="num2Entry"
+       Keyboard="Numeric"
+       Text="{Binding Expression.Num2, Mode=TwoWay}" />
+
+        <Button Text="Sumar"
+        Command="{Binding CalcularCommand}"
+        CommandParameter="Sumar" />
+
+        <Button Text="Restar"
+        Command="{Binding CalcularCommand}"
+        CommandParameter="Restar" />
+
+        <Button Text="Multiplicar"
+        Command="{Binding CalcularCommand}"
+        CommandParameter="Multiplicar" />
+
+        <Button Text="Dividir"
+        Command="{Binding CalcularCommand}"
+        CommandParameter="Dividir" />
+
+        <Label Text="{Binding Resultado}" />
+    </StackLayout>
+
+</ContentPage>
